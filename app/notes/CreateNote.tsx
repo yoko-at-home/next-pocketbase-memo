@@ -35,7 +35,7 @@ export default function CreateNote() {
   };
 
   return (
-    <div className="w-1/2 mx-auto bg-green-50">
+    <div className="w-1/2 mx-auto bg-green-50 p-6">
       <form
         onSubmit={create}
         className="flex flex-col justify-around items-stretch"
@@ -53,9 +53,11 @@ export default function CreateNote() {
           cols={5}
           value={content}
           onChange={(e) => setContent(e.target.value)}
-          className="p-2 border-2 mt-1"
+          className="p-2 border-2 mt-3"
         />
-        <button type="submit">Create note</button>
+        <button className="bg-green-600 rounded-lg p-2 mt-2" type="submit">
+          Create note
+        </button>
       </form>
     </div>
   );
