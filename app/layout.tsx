@@ -16,14 +16,14 @@ export default function RootLayout({
   return (
     <html>
       <body>
-        <main>
+        <main className="w-9/12 mx-auto">
           <nav>
             {items.map(({ href, label }) => {
               return (
                 <Link
                   key={href}
                   href={href}
-                  className="m-2 whitespace-nowrap text-2xl font-medium text-green-300 lg:text-3xl"
+                  className="m-2 whitespace-nowrap text-2xl font-medium text-green-300 lg:text-2xl"
                 >
                   {label}
                 </Link>
