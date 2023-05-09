@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-head-element */
 import Link from 'next/link';
-import "./output.css";
+import "./globals.css";
 
 const items = [
   { href: "/", label: "Home" },
