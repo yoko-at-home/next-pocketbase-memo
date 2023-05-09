@@ -1,6 +1,12 @@
 /* eslint-disable @next/next/no-head-element */
 import Link from 'next/link';
-import './globals.css';
+import "./output.css";
+
+const items = [
+  { href: "/", label: "Home" },
+  { href: "/notes", label: "Notes" },
+  { href: "/tictac", label: "Tic-tac-toe" },
+];
 
 export default function RootLayout({
   children,
@@ -12,12 +18,17 @@ export default function RootLayout({
       <body>
         <main>
           <nav>
-            <Link href="/">
-              Home
-            </Link>
-            <Link href="/notes">
-              Notes
-            </Link>
+            {items.map(({ href, label }) => {
+              return (
+                <Link
+                  key={href}
+                  href={href}
+                  className="m-2 whitespace-nowrap text-2xl font-medium text-green-300 lg:text-3xl"
+                >
+                  {label}
+                </Link>
+              );
+            })}
           </nav>
           {children}
         </main>

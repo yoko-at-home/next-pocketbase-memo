@@ -1,4 +1,4 @@
-import PocketBase from "pocketbase";
+// import PocketBase from "pocketbase";
 import Link from "next/link";
 import styles from "./Notes.module.css";
 import CreateNote from "./CreateNote";

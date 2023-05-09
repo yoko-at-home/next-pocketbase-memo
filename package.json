@@ -3,12 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbo",
-    "build": "next build",
+    "dev": "concurrently \"next dev\" \"tailwindcss --input ./app/globals.css --output ./app/output.css --watch\"",
+    "build": "tailwindcss ./app/globals.css --output ./app/output.css && next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "concurrently": "^8.0.1",
     "next": "13.0.0",
     "pocketbase": "^0.7.4",
     "react": "18.2.0",

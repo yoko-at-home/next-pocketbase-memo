@@ -35,20 +35,28 @@ export default function CreateNote() {
   };
 
   return (
-    <form onSubmit={create}>
-      <h3>Create a new Note</h3>
-      <input
-        type="text"
-        placeholder="Title"
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
-      />
-      <textarea
-        placeholder="Content"
-        value={content}
-        onChange={(e) => setContent(e.target.value)}
-      />
-      <button type="submit">Create note</button>
-    </form>
+    <div className="w-1/2 mx-auto bg-green-50">
+      <form
+        onSubmit={create}
+        className="flex flex-col justify-around items-stretch"
+      >
+        <h3>Create a new Note</h3>
+        <input
+          type="text"
+          placeholder="Title"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          className="p-2 border-2"
+        />
+        <textarea
+          placeholder="Content"
+          cols={5}
+          value={content}
+          onChange={(e) => setContent(e.target.value)}
+          className="p-2 border-2 mt-1"
+        />
+        <button type="submit">Create note</button>
+      </form>
+    </div>
   );
 }
